@@ -5,7 +5,7 @@
 ## Contact info:
  [**e-mail: *alexejshakinko@gmail.com***](e-mail:alexejshakinko@gmail.com)
 
-[**tel: *+375 (29) 912 67 ** ***](tel:+375291112233)
+[**tel: *+375 (25) 000 00 00***](tel:+375291112233)
 
 ***
 
