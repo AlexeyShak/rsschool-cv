@@ -27,7 +27,8 @@ Engineer of heating, ventilation and air conditioning systems. Want to learn JS 
 ##  Code exapmle:
  1. **Caesar's cipher encrypting code**
 
- ```function encrypt(text, key) {
+ ```
+ function encrypt(text, key) {
     if(typeof text !== 'string' || typeof key !== 'number') {
         throwError('Wrong encryption parametors!', 1);
     }
@@ -50,8 +51,13 @@ Engineer of heating, ventilation and air conditioning systems. Want to learn JS 
 
 ##  Education: 
  1. **BNTU**: 
-    * Faculty of Energy Construction
+    * Faculty of Energy Construction (2013-2018)
 
+***
+
+##  Work experience: 
+ 1. **"Priorbank" JSC**: 
+    * engineer of fixed assets management department (2018-2020)
 
 ***
 
