@@ -1,0 +1,87 @@
+
+.wrapper {
+    margin:  0 auto;
+    padding: 0 auto;
+    max-width:1024px;
+
+}
+
+body{
+    background-color: #c2d4e4;
+    font-family: 'Open Sans', Verdana, Tahoma, sans-serif;
+
+}
+
+.avatar  {
+    display: inline-block;
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+}
+
+.header__navigation {
+    vertical-align: top; 
+    display: inline-block;
+}
+.navigation li{
+    display: inline-block;
+    width: 120px;
+
+}
+
+li a{display: inline-block;
+    text-align: center;
+    margin: auto 0 auto 0;
+    width: 120px; 
+}
+
+
+.skills_list {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .skills_list dt {
+    padding-left: 32px;
+    font-size: 20px;
+    font-style: italic;
+  }
+
+  
+
+  .level {
+    margin: 4px 0 16px;
+    padding: 0;
+    height: 14px;
+    font-size: 0;
+    background-color: #ffffff;
+    border: 1px solid #86c3fa;
+    border-radius: 8px;
+  }
+  
+  .level div {
+    margin: 1px;
+    height: 12px;
+    background-color: #288be6;
+    border-radius: 6px;
+  }
+
+
+  .education_list li {
+      margin-top: 20px;
+    padding-left: 32px;
+    font-size: 20px;
+    font-weight:700 ;
+  }
+
+  .education_list li ul li{
+    margin-top: 5px;
+    padding-left: 32px;
+
+    font-weight:400 ;
+    font-style:italic ;
+  }
+
+  footer{
+    margin-top:100px;
+  }
