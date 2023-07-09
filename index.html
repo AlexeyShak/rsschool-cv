@@ -26,7 +26,9 @@
                         <li><a href="#contact_info">Contact info</a></li>
                         <li><a href="#about_me">About me</a></li>
                         <li><a href="#my_skills">My skills</a></li>
+                        <li><a href="#code_exapmle">Code exapmle</a></li>
                         <li><a href="#education">Education</a></li>
+                        <li><a href="#work_experience">Work Experience</a></li>
                         <li><a href="#languages">Languages</a></li>
                     </ul>
                 </nav>
@@ -43,13 +45,13 @@
                 </section>
                 <br>
                 <section>
-                    <h2 >About me:</h2>
+                    <h2 id="about_me" >About me:</h2>
                     <p class="aboutme">
                         Engineer of heating, ventilation and air conditioning systems. Want to learn JS and become a FE developer.
                     </p>
                 </section>
                 <br>
-                <section class="my_skills_information">
+                <section class="my_skills_information" >
                     <h2 id="my_skills">My skills:</h2>
                     <div class="skills">
                         <dl class="skills_list">
@@ -76,16 +78,86 @@
                         </dl>
                     </div>
                 </section>
-                <br>
+                <section class="code_example">
+                    <h2 id="code_exapmle">Code example:</h2>
+                    <pre class="code"> 
+const { throwError } = require("../errors");
+const alphLength = 26;
+
+const upperCaseStartCode = 'A'.charCodeAt();
+const upperCaseEndCode = 'Z'.charCodeAt();
+
+const lowerCaseStartCode = 'a'.charCodeAt();
+const lowerCaseEndCode = 'z'.charCodeAt();
+
+function encrypt(text, key) {
+    if(typeof text !== 'string' || typeof key !== 'number') {
+        throwError('Wrong encryption parametors!', 1);
+    }
+
+    return text.split('').map(letter => {
+        if(letter.charCodeAt() >= upperCaseStartCode && letter.charCodeAt() <= upperCaseEndCode) {
+            return String.fromCharCode(upperCaseStartCode + (letter.charCodeAt() - upperCaseStartCode + key) % alphLength);
+        }
+        else if(letter.charCodeAt() >= lowerCaseStartCode && letter.charCodeAt() <= lowerCaseEndCode) {
+            return String.fromCharCode(lowerCaseStartCode + (letter.charCodeAt() - lowerCaseStartCode + key) % alphLength);  
+        }
+
+        return letter;
+    }).join('');
+    }
+
+
+function decrypt(text, key) {
+    if(typeof text !== 'string' || typeof key !== 'number') {
+        throwError('Wrong decryption parametors!', 1);
+    }
+
+    return text.split('').map(letter => {
+            if(letter.charCodeAt() >= upperCaseStartCode && letter.charCodeAt() <= upperCaseEndCode) {
+                return String.fromCharCode(upperCaseEndCode - (upperCaseEndCode - letter.charCodeAt() + key) % alphLength );
+            }
+            else if(letter.charCodeAt() >= lowerCaseStartCode && letter.charCodeAt() <= lowerCaseEndCode) {
+                return (String.fromCharCode(lowerCaseEndCode - (lowerCaseEndCode - letter.charCodeAt() + key) % alphLength )) 
+            }
+            return letter;
+        }).join('');
+    };
+    // throwError('Not a string!', 1);
+    
+function ceasarE(text) {
+    return encrypt(text, 1);   
+};
+
+function ceasarD(text) {
+    return decrypt(text, 1);
+};
+
+
+module.exports = {encrypt, decrypt, ceasarD, ceasarE};
+                    </pre>
+
                 <section class="my_education_information">
                     <h2 id="education">Education:</h2>
-                    <ol class="education_list">
+                    <ul class="education_list">
                         <li>BNTU
                             <ul>
                                 <li>Faculty of Energy Construction;</li>
                             </ul>
                         </li>
-                    </ol>
+                    </ul>
+
+                </section>
+                <br>
+                <section class="my_education_information">
+                    <h2 id="work_experience">Work Experience:</h2>
+                    <ul class="education_list">
+                        <li>Priorbank JSC
+                            <ul>
+                                <li>Engineer of fixed assets management department;</li>
+                            </ul>
+                        </li>
+                    </ul>
 
                 </section>
                 <br>

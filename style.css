@@ -1,7 +1,7 @@
 .wrapper {
     margin:  0 auto;
     padding: 0 auto;
-    max-width:1024px;
+    max-width:1080px;
 
 }
 
@@ -34,20 +34,50 @@ body{
 .header__navigation {
     vertical-align: top; 
     display: inline-block;
+    font-size: 15px;
 
 }
 .navigation li{
     display: inline-block;
-    width: 120px;
+    width: 100px;
 
 }
 
 li a{display: inline-block;
     text-align: center;
-    margin: auto 0 auto 0;
-    width: 120px; 
+    margin: 10;
+    width: 100px; 
 }
 
+.my_skills_information{
+    float: left;
+    margin:  0 ;
+    padding: 0 ;
+    width: 45%;
+}
+
+code_example{
+    float: right;
+    margin:  0 ;
+    padding: 0 ;
+    width: 50%;
+}
+
+.code{
+    overflow: scroll; 
+    width: 450px; 
+    height: 300px; 
+    padding: 10px; 
+    border: 2px solid #8A2BE2;
+    border-radius: 8px;
+   } 
+
+.my_education_information{
+
+    margin:  0;
+    padding: 0, 30px ;
+    width: 50%;
+}
 
 .skills_list {
     margin: 0;
