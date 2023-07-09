@@ -5,7 +5,6 @@
 
 }
 
-
 body{
     background-color: #F8F8FF;
     font-family: 'Montserrat', 'Open Sans', Verdana, Tahoma, sans-serif;
@@ -14,6 +13,10 @@ body{
     justify-content: space-between;
 
 }
+
+.center {
+    text-align: center;
+  }
 
 .avatar  {
     display: inline-block;
