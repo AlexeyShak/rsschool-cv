@@ -5,9 +5,10 @@
 
 }
 
+
 body{
-    background-color: #c2d4e4;
-    font-family: 'Open Sans', Verdana, Tahoma, sans-serif;
+    background-color: #F8F8FF;
+    font-family: 'Montserrat', 'Open Sans', Verdana, Tahoma, sans-serif;
 
 }
 
@@ -15,12 +16,25 @@ body{
     display: inline-block;
     width: 250px;
     height: 250px;
-    border-radius: 50%;
+    border-radius: 60%;
+    border-color:#87CEFA;
+    border-width: 100px;
+}
+
+.info{
+    font-style:italic;
+    color: violet;
+
+}
+.aboutme{
+    font-style:italic;
+    font-size: 20px;
 }
 
 .header__navigation {
     vertical-align: top; 
     display: inline-block;
+
 }
 .navigation li{
     display: inline-block;
@@ -54,14 +68,14 @@ li a{display: inline-block;
     height: 14px;
     font-size: 0;
     background-color: #ffffff;
-    border: 1px solid #86c3fa;
+    border: 1px solid #8A2BE2;
     border-radius: 8px;
   }
   
   .level div {
     margin: 1px;
     height: 12px;
-    background-color: #288be6;
+    background-color: #9400D3;
     border-radius: 6px;
   }
 
