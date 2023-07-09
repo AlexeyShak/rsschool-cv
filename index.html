@@ -98,10 +98,10 @@ if(typeof text !== 'string' || typeof key !== 'number') {
 }
 
 return text.split('').map(letter => {
-    if(letter.charCodeAt() >= upperCaseStartCode && letter.charCodeAt() &lt= upperCaseEndCode) {
+    if(letter.charCodeAt() >= upperCaseStartCode && letter.charCodeAt() &lt;= upperCaseEndCode) {
         return String.fromCharCode(upperCaseStartCode + (letter.charCodeAt() - upperCaseStartCode + key) % alphLength);
     }
-    else if(letter.charCodeAt() >= lowerCaseStartCode && letter.charCodeAt() &lt= lowerCaseEndCode) {
+    else if(letter.charCodeAt() >= lowerCaseStartCode && letter.charCodeAt() &lt;= lowerCaseEndCode) {
         return String.fromCharCode(lowerCaseStartCode + (letter.charCodeAt() - lowerCaseStartCode + key) % alphLength);  
     }
 
@@ -116,10 +116,10 @@ if(typeof text !== 'string' || typeof key !== 'number') {
 }
 
 return text.split('').map(letter => {
-        if(letter.charCodeAt() >= upperCaseStartCode && letter.charCodeAt() &lt= upperCaseEndCode) {
+        if(letter.charCodeAt() >= upperCaseStartCode && letter.charCodeAt() &lt;= upperCaseEndCode) {
             return String.fromCharCode(upperCaseEndCode - (upperCaseEndCode - letter.charCodeAt() + key) % alphLength );
         }
-        else if(letter.charCodeAt() >= lowerCaseStartCode && letter.charCodeAt() &lt= lowerCaseEndCode) {
+        else if(letter.charCodeAt() >= lowerCaseStartCode && letter.charCodeAt() &lt;= lowerCaseEndCode) {
             return (String.fromCharCode(lowerCaseEndCode - (lowerCaseEndCode - letter.charCodeAt() + key) % alphLength )) 
         }
         return letter;
