@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="RESUME, CV, DEVELOPER, JavaScript">
+    <meta name="description" content="CV of the best future javascript developer">
+    <meta name="author" content="Alexey Shakinko">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <title>CV_Alexey_Shakinko</title>
+</head>
+
+<body>
+    <header class="header">
+        <div class="wrapper">
+            <h1 class="center">Alexey Shakinko</h1>
+
+            <img class="avatar" src="./assets/img/cv_photo.jpg" alt=" My Photo">
+
+            <nav class="header__navigation">
+                <ul class="navigation">
+                    <li><a href="#contact_info">Contact info</a></li>
+                    <li><a href="#about_me">About me</a></li>
+                    <li><a href="#my_skills">My skills</a></li>
+                    <li><a href="#code_exapmle">Code exapmle</a></li>
+                    <li><a href="#education">Education</a></li>
+                    <li><a href="#work_experience">Project Experience</a></li>
+                    <li><a href="#languages">Languages</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div class="wrapper">
+            <br>
+            <section>
+                <h2 id="contact_info">Contact info:</h2>
+                <div><i>My Email: </i><a class="info" href="mailto:alexejshakinko@gmail.com">alexejshakinko@gmail.com</a></div>
+                <br>
+                <div><i>My Tel: </i><a class="info" href="tel:+375291112233"> +375 29 111 22 33</a></div>
+            </section>
+            <br>
+            <section>
+                <h2 id="about_me" >About me:</h2>
+                <p class="aboutme">
+                    Engineer of heating, ventilation and air conditioning systems. Want to learn JS and become a FE developer.
+                </p>
+            </section>
+            <br>
+            <section class="my_skills_information" >
+                <h2 id="my_skills">My skills:</h2>
+                <div class="skills">
+                    <dl class="skills_list">
+                        <dt class="skill_node">NodeJS</dt>
+                        <dd class="level">
+                            <div style="width: 2%;">15%</div>
+                        </dd>
+                        <dt class="skill_html">HTML</dt>
+                        <dd class="level">
+                            <div style="width: 5%;">5%</div>
+                        </dd>
+                        <dt class="skill_css">CSS</dt>
+                        <dd class="level">
+                            <div style="width: 5%;">5%</div>
+                        </dd>
+                        <dt class="skill_js">JS</dt>
+                        <dd class="level">
+                            <div style="width: 10%;">1%</div>
+                        </dd>
+                        <dt class="skill_git">Git</dt>
+                        <dd class="level">
+                            <div style="width: 5%;">5%</div>
+                        </dd>
+                    </dl>
+                </div>
+                <div class="container"> </div>
+            </section>
+            
+            <section class="code_example">
+                <h2 id="code_exapmle">Code example:</h2>
+                <pre class="code"> 
+const { throwError } = require("../errors");
+const alphLength = 26;
+
+const upperCaseStartCode = 'A'.charCodeAt();
+const upperCaseEndCode = 'Z'.charCodeAt();
+
+const lowerCaseStartCode = 'a'.charCodeAt();
+const lowerCaseEndCode = 'z'.charCodeAt();
+
+function encrypt(text, key) {
+if(typeof text !== 'string' || typeof key !== 'number') {
+    throwError('Wrong encryption parametors!', 1);
+}
+
+return text.split('').map(letter => {
+    if(letter.charCodeAt() >= upperCaseStartCode && letter.charCodeAt() &lt;= upperCaseEndCode) {
+        return String.fromCharCode(upperCaseStartCode + (letter.charCodeAt() - upperCaseStartCode + key) % alphLength);
+    }
+    else if(letter.charCodeAt() >= lowerCaseStartCode && letter.charCodeAt() &lt;= lowerCaseEndCode) {
+        return String.fromCharCode(lowerCaseStartCode + (letter.charCodeAt() - lowerCaseStartCode + key) % alphLength);  
+    }
+
+    return letter;
+}).join('');
+}
+
+
+function decrypt(text, key) {
+if(typeof text !== 'string' || typeof key !== 'number') {
+    throwError('Wrong decryption parametors!', 1);
+}
+
+return text.split('').map(letter => {
+        if(letter.charCodeAt() >= upperCaseStartCode && letter.charCodeAt() &lt;= upperCaseEndCode) {
+            return String.fromCharCode(upperCaseEndCode - (upperCaseEndCode - letter.charCodeAt() + key) % alphLength );
+        }
+        else if(letter.charCodeAt() >= lowerCaseStartCode && letter.charCodeAt() &lt;= lowerCaseEndCode) {
+            return (String.fromCharCode(lowerCaseEndCode - (lowerCaseEndCode - letter.charCodeAt() + key) % alphLength )) 
+        }
+        return letter;
+    }).join('');
+};
+// throwError('Not a string!', 1);
+
+function ceasarE(text) {
+return encrypt(text, 1);   
+};
+
+function ceasarD(text) {
+return decrypt(text, 1);
+};
+
+
+module.exports = {encrypt, decrypt, ceasarD, ceasarE};
+                </pre>
+            </section>
+            
+            <section class="my_education_information">
+                <h2 id="education">Education:</h2>
+                <ul class="education_list">
+                    <li>BNTU
+                        <ul>
+                            <li>Faculty of Energy Construction;</li>
+                        </ul>
+                    </li>
+                </ul>
+
+            </section>
+            <section class="my_work_information">
+                <h2 id="work_experience">Project Experience:</h2>
+                <ul class="education_list">
+                    <li> CV Markdowm (RS School task)
+                        <ul>
+                            <li><a href="https://AlexeyShak.github.io/rsschool-cv/cv">cv link</a></li>
+                        </ul>
+                    </li>
+                </ul>
+
+            </section>
+            <br>
+            <section class="my_languages_information">
+                <h2 id="languages">Languages:</h2>
+                <ul>
+                    <li>English: <b>(upper intermediate)</b></li>
+                    <li>Russian: <b>(native)</b></li>
+                    <li>German: <b>(intermediate)</b></li>
+                </ul>
+            </section>
+
+
+        </div>
+    </main>
+<footer class="page-footer">
+    <div class="page-footer__inner">
+        <div class="page-footer__copyright">
+        <p>© 2023 by Alexey Shakinko</p>
+        </div>
+        <ul class="page-footer__contact-links">
+        <li class="contact-links__item"><a class="git_link" href="https://github.com/AlexeyShak" target="_blank">Github</a></li>
+        <li class="contact-links__item">
+            <a href="https://rs.school/js/" class="contact-links__link" target="_blank">
+                <img class="rs_link" src="./assets/img/rs_school_js(1).ico" alt=" RS School page">
+            </a>
+        </li>
+        </ul>
+    </div>
+    </footer>
+</body>
+</html>
+
