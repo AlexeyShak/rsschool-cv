@@ -1,0 +1,149 @@
+.wrapper {
+    margin:  0 auto;
+    padding: 0 auto;
+    max-width:1080px;
+
+}
+
+body{
+    background-color: #F8F8FF;
+    font-family: 'Montserrat', 'Open Sans', Verdana, Tahoma, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+
+.center {
+    text-align: center;
+  }
+
+.avatar  {
+    display: inline-block;
+    width: 240px;
+    height: 250px;
+    border-radius: 60%;
+    border-color:#87CEFA;
+    border-width: 100px;
+}
+
+.info{
+    font-style:italic;
+    color: violet;
+
+}
+.aboutme{
+    font-style:italic;
+    font-size: 20px;
+}
+
+.header__navigation {
+    vertical-align: top; 
+    display: inline-block;
+    font-size: 15px;
+
+}
+.navigation li{
+    display: inline-block;
+    width: 100px;
+
+}
+
+li a{display: inline-block;
+    text-align: center;
+    margin: 10;
+    width: 100px; 
+}
+
+.my_skills_information{
+    float: left;
+    margin:  0px ;
+    padding: 0 ;
+    width: 40%;
+}
+
+.code_example{
+    float:right;
+    margin:  0 ;
+    padding: 0 ;
+    width: 50%;
+
+}
+
+.code{
+    overflow: scroll; 
+    width: 450px; 
+    height: 270px; 
+    padding: 10px; 
+    border: 2px solid #8A2BE2;
+    border-radius: 8px;
+} 
+
+.my_education_information{
+    float: left;
+    margin:  0, 20px;
+    
+}
+
+.my_work_information{
+    clear:both;
+    margin:  0, 20px, 0, 0,;
+}
+
+.skills_list {
+    margin: 0;
+    padding: 0;
+  }
+  
+.skills_list dt {
+    padding-left: 32px;
+    font-size: 20px;
+    font-style: italic;
+}
+
+.level {
+    margin: 4px 0 16px;
+    padding: 0;
+    height: 14px;
+    font-size: 0;
+    background-color: #ffffff;
+    border: 1px solid #8A2BE2;
+    border-radius: 8px;
+}
+  
+.level div {
+    margin: 1px;
+    height: 12px;
+    background-color: #9400D3;
+    border-radius: 6px;
+}
+
+
+.education_list li {
+      margin-top: 20px;
+    padding-left: 32px;
+    font-size: 20px;
+    font-weight:700 ;
+}
+
+.education_list li ul li{
+    margin-top: 5px;
+    padding-left: 32px;
+
+    font-weight:400 ;
+    font-style:italic ;
+ }
+
+footer{
+    float:left;
+    margin-top:100px;
+}
+
+.git_link{
+    color: black
+}
+
+.rs_link{
+    width: 80px;
+    height:29px;
+}
