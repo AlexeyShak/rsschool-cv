@@ -19,7 +19,7 @@
         <div class="wrapper">
             <h1 class="center">Alexey Shakinko</h1>
 
-            <img class="avatar" src="/assets/img/cv photo.jpg" alt=" My Photo">
+            <img class="avatar" src="/assets/img/cv_photo.jpg" alt=" My Photo">
 
             <nav class="header__navigation">
                 <ul class="navigation">
@@ -98,10 +98,10 @@ if(typeof text !== 'string' || typeof key !== 'number') {
 }
 
 return text.split('').map(letter => {
-    if(letter.charCodeAt() >= upperCaseStartCode && letter.charCodeAt() <= upperCaseEndCode) {
+    if(letter.charCodeAt() >= upperCaseStartCode && letter.charCodeAt() &lt= upperCaseEndCode) {
         return String.fromCharCode(upperCaseStartCode + (letter.charCodeAt() - upperCaseStartCode + key) % alphLength);
     }
-    else if(letter.charCodeAt() >= lowerCaseStartCode && letter.charCodeAt() <= lowerCaseEndCode) {
+    else if(letter.charCodeAt() >= lowerCaseStartCode && letter.charCodeAt() &lt= lowerCaseEndCode) {
         return String.fromCharCode(lowerCaseStartCode + (letter.charCodeAt() - lowerCaseStartCode + key) % alphLength);  
     }
 
@@ -116,10 +116,10 @@ if(typeof text !== 'string' || typeof key !== 'number') {
 }
 
 return text.split('').map(letter => {
-        if(letter.charCodeAt() >= upperCaseStartCode && letter.charCodeAt() <= upperCaseEndCode) {
+        if(letter.charCodeAt() >= upperCaseStartCode && letter.charCodeAt() &lt= upperCaseEndCode) {
             return String.fromCharCode(upperCaseEndCode - (upperCaseEndCode - letter.charCodeAt() + key) % alphLength );
         }
-        else if(letter.charCodeAt() >= lowerCaseStartCode && letter.charCodeAt() <= lowerCaseEndCode) {
+        else if(letter.charCodeAt() >= lowerCaseStartCode && letter.charCodeAt() &lt= lowerCaseEndCode) {
             return (String.fromCharCode(lowerCaseEndCode - (lowerCaseEndCode - letter.charCodeAt() + key) % alphLength )) 
         }
         return letter;
@@ -181,10 +181,10 @@ module.exports = {encrypt, decrypt, ceasarD, ceasarE};
         <p>© 2023 by Alexey Shakinko</p>
         </div>
         <ul class="page-footer__contact-links">
-        <li class="contact-links__item"><a class="git_link" href="https://github.com/AlexeyShak" class="contact-links__link" target="_blank">Github</a></li>
+        <li class="contact-links__item"><a class="git_link" href="https://github.com/AlexeyShak" target="_blank">Github</a></li>
         <li class="contact-links__item">
             <a href="https://rs.school/js/" class="contact-links__link" target="_blank">
-                <img class="rs_link" src="/assets/img/rs_school_js (1).ico" alt=" RS School page">
+                <img class="rs_link" src="/assets/img/rs_school_js(1).ico" alt=" RS School page">
             </a>
         </li>
         </ul>
